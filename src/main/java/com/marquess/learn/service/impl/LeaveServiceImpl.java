@@ -65,6 +65,10 @@ public class LeaveServiceImpl implements LeaveService{
   public void completeTaskByUser(String taskId, String userId, String audit) {
     testLeaveService.completeTaskByUser(taskId, userId, audit);
   }
-
+  
+  @Override
+  public LeaveInfo getById(String userId) {
+    return leaveMapper.getById(userId);
+  }
 }
 

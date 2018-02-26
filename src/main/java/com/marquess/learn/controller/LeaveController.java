@@ -48,5 +48,10 @@ public class LeaveController {
     leaveService.completeTaskByUser(taskId, userId, audit);
     return "审批完成...";
   }
+  
+  @RequestMapping("/getById")
+  public Object getById(String userId, HttpServletRequest request) {
+    return leaveService.getById("1");
+  }
 }
 

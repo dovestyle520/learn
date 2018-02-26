@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.marquess.learn.LeaveMapper">
+<mapper namespace="com.marquess.learn.dao.LeaveMapper">
 	<resultMap id="LeaveInfoMap" type="com.marquess.learn.entity.LeaveInfo">
 		<result property="id" column="id" />
 		<result property="leaveMsg" column="leave_msg" />
@@ -12,7 +12,7 @@
 		select * from leave_info where id = #{id}
 	</select>
 
-	<insert id="insert">
+	<insert id="insert" >
 		insert into leave_info
 		values(
 			#{id},#{leaveMsg},#{status}

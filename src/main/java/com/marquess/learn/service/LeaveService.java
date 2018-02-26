@@ -25,5 +25,7 @@ public interface LeaveService {
      * @param audit
      */    
     void completeTaskByUser(String taskId, String userId, String audit);
+
+    LeaveInfo getById(String userId);
 }
 
