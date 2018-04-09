@@ -44,7 +44,7 @@ public class StockDownloadController {
     	    CFResponseVO response = JSON.parseObject(jsonData, CFResponseVO.class);
     	    Map<String, Object> value = JSONObject.toJavaObject((JSONObject)response.getValue(), Map.class);
     	    System.out.println("ooooo"+ value.get("pc"));
-    	    List<String> data = JSON.parseArray((String)value.get("data"), String.class);//JSONObject.toJavaObject((JSONObject)value.get("data"), List.class);
+    	    List<String> data = JSON.parseArray(value.get("data").toString(), String.class);//JSONObject.toJavaObject((JSONObject)value.get("data"), List.class);
     	    for(String row : data) {
     	    	System.out.println(row);
     	    }
